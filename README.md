@@ -21,7 +21,7 @@ in [UserSavedByCompiler](https://github.com/stuyvesant-cs/solutionsHolmes/blob/2
 
 - definition that a class / type that is parameterized by a generic type, `T`:
 ```
-your exemplifying line from the Pair example here
+public class Pair<T>
 ```
 in [class](URL)
 
@@ -29,28 +29,31 @@ in [class](URL)
 - declaration of a variable that can hold a reference to an instance
 of such a class:
 ```
-your exemplifying line from the Pair example here
+private T first;
+private T second;
 ```
 in [class](URL)
 
 
 - assignment to such a variable:
 ```
-your exemplifying line from the Pair example here
+this.first =  first;
+this.second = second;
 ```
 in [class](URL)
 
 
 - declaration of a method that returns an instance of such a type:
 ```
-your exemplifying line from the Pair example here
+public T getFirst()  { return first; }
+public T getSecond() { return second; }
 ```
 in [class](URL)
 
 
 - successful instantiation of an instance of such a class:
 ```
-your exemplifying line from the Pair example here
+Pair<Integer> thisPair = new Pair(bigger,smaller);
 ```
 in [class](URL)
 
@@ -83,5 +86,3 @@ in [class](URL)
 your exemplifying line from the Pair example here
 ```
 in [class](URL)
-
-
