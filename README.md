@@ -23,7 +23,7 @@ in [UserSavedByCompiler](https://github.com/stuyvesant-cs/solutionsHolmes/blob/2
 ```
 public class Pair<T>
 ```
-in [class](URL)
+in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
 
 
 - declaration of a variable that can hold a reference to an instance
@@ -32,7 +32,7 @@ of such a class:
 private T first;
 private T second;
 ```
-in [class](URL)
+in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
 
 
 - assignment to such a variable:
@@ -40,22 +40,21 @@ in [class](URL)
 this.first =  first;
 this.second = second;
 ```
-in [class](URL)
+in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
 
 
 - declaration of a method that returns an instance of such a type:
 ```
-public T getFirst()  { return first; }
-public T getSecond() { return second; }
+private static Pair<Integer> nextPairAfter( Pair currentPair) {
 ```
-in [class](URL)
+in [FibPair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/FibPair.java)
 
 
 - successful instantiation of an instance of such a class:
 ```
 Pair<Integer> thisPair = new Pair(bigger,smaller);
 ```
-in [class](URL)
+in [FibPair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/FibPair.java)
 
 
 - *un*successful instantiation of an instance of such a class,
