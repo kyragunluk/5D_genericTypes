@@ -40,7 +40,7 @@ in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair
 this.first =  first;
 this.second = second;
 ```
-in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
+in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/Pair/FibPair.java)
 
 
 - declaration of a method that returns an instance of such a type:
@@ -60,28 +60,30 @@ in [FibPair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/F
 - *un*successful instantiation of an instance of such a class,
 caught by the compiler:
 ```
-your exemplifying line from the Pair example here
+thisPair = new Pair(thisPair,bigger);
 ```
-in [class](URL)
+in [FibPair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
 
 
 - a variable that can hold a reference to an instance of the generic type
 in a class / type that is parameterized by a generic type:
 ```
-your exemplifying line from the Pair example here
+private T first;
+private T second;
 ```
-in [class](URL)
+in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
 
 
 - the declaration of a method or constructor that accepts a parameter of a generic type:
 ```
-your exemplifying line from the Pair example here
+ public Pair( T first, T second) {
 ```
-in [class](URL)
+in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
 
 
 - the declaration of a method that returns a value of a generic type:
 ```
-your exemplifying line from the Pair example here
+public T getFirst()  { return first; }
+public T getSecond() { return second; }
 ```
-in [class](URL)
+in [Pair](https://github.com/kyragunluk/5D_genericTypes/blob/master/FibPair/Pair.java)
