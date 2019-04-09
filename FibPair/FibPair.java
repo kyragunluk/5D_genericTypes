@@ -12,13 +12,13 @@ public class FibPair {
 
         /* optional extra education: Fibonacci numbers
            recursively, and in linear time */
-        // oneFib(  0, 0);  // base case
-        // oneFib(  1, 1);  // smallest recursive case, or base case
-        // oneFib(  2, 1);  // recursive case, sometimes smallest
-        // oneFib(  7, 13); // recursive case
+        oneFib(  0, 0);  // base case
+        oneFib(  1, 1);  // smallest recursive case, or base case
+        oneFib(  2, 1);  // recursive case, sometimes smallest
+        oneFib(  7, 13); // recursive case
 
-        // System.out.println( "no noticeable delay before...");
-        // oneFib( 46, 1836311903);
+        System.out.println( "no noticeable delay before...");
+        oneFib( 46, 1836311903);
           /* value from
              stackoverflow.com/questions/15065088/upper-limits-for-fibonnacci
              but adjusted because they index from 1. Who ARE these people?
@@ -35,7 +35,7 @@ public class FibPair {
                                 ) {
 
 
-        Pair thisPair = Pair(bigger , smaller);
+        Pair<Integer> thisPair = new Pair(bigger,smaller);
 
         System.out.println(
             "The pair after "
@@ -54,8 +54,9 @@ public class FibPair {
         the big number is the sum of the given pair
         the small number is the the old big number
      */
-    private static Pair nextPairAfter( Pair currentPair) {
-        return Pair(currentPair.first + currentPair.second, currentpair.second);
+    private static Pair<Integer> nextPairAfter( Pair currentPair) {
+        return new Pair ((int)currentPair.getFirst() + (int)currentPair.getSecond()
+                        , currentPair.getFirst());
     }
 
 
@@ -83,6 +84,12 @@ public class FibPair {
               n >= 0
      */
     private static Integer fib( int n) {
-        return -2;
+        if (n == 0){return 0;}
+        else if (n == 1 || n == 2){
+            return 1;
+        }
+        else{
+            return fib (n-1) + fib (n-2);
+        }
     }
 }

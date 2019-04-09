@@ -6,13 +6,14 @@
   List_inArraySlots
  */
 
-public class OrderedList_inArraySlots
-    implements OrderedList {
+import java.util.*;
 
-    private ?? Java-standard ArrayList here ?? list_iAS;
+public class OrderedList_inArraySlots{
+
+    private ArrayList<Integer> list_iAS;
 
     public OrderedList_inArraySlots() {
-        list_iAS = new List_inArraySlots();
+        list_iAS = new ArrayList();
     }
 
     /**
@@ -26,7 +27,12 @@ public class OrderedList_inArraySlots
       @return a string representation of this Orderedlist_iAS
      */
     public String toString() {
-        return list_iAS.toString();
+        String result = "[";
+        for(int index = 0; index<list_iAS.size(); index++){
+            result += list_iAS.get(index) + ",";
+        }
+        result += "]";
+        return result;
     }
 
 
@@ -34,14 +40,15 @@ public class OrderedList_inArraySlots
       Put @value where it belongs in the list.
       @pre: the list is in increasing order
      */
-     public boolean add( int value) {
-         int dest = 0;
-         for( ; dest < list_iAS.size() && list_iAS.get( dest) < value
-            ; dest++) ;
-         // System.out.println( "OL adding " + value
-         //                   + " at index " + dest);
-         list_iAS.add( dest, value);
-         return true;
+     public boolean add( Integer value) {
+        for (int index = 0 ; index < list_iAS.size()-1 ; index++){
+            if (value > list_iAS.get(index)){
+                list_iAS.add(index+1,value);
+                return true;
+            }
+        }
+        list_iAS.add(0,value);
+        return true;
      }
 
 
@@ -53,7 +60,7 @@ public class OrderedList_inArraySlots
            whether the condition was violated.)
      */
     public int get( int index ) {
-        return list_iAS.get( index);
+        return list_iAS.get(index);
     }
 
 
@@ -66,6 +73,6 @@ public class OrderedList_inArraySlots
       @return the value that was removed from the list
      */
     public int remove( int index) {
-        return list_iAS.remove( index);
+        return list_iAS.remove(index);
     }
 }
